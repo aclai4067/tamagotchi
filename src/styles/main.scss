@@ -1,3 +1,47 @@
 body{
     background-color: #c5dbcf;
 }
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+}
+
+.quad {
+    height: 50%;
+    width: 50%;
+}
+
+.row{
+    display: flex;
+}
+
+.category{
+    color: #779183fd;
+    font-size: 4em;
+    position: absolute;
+}
+
+#eat .category{
+    top: 5%;
+    left: 5%;
+}
+
+#fullScore{
+    margin-top: 7px;
+}
+
+#progressBar{
+    background-color: dimgrey;
+    border: 1px solid dimgrey;
+    border-radius: 20px;
+    width: 30%;
+}
+
+#eatBarPercent{
+    background-color: green;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
