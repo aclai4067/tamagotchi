@@ -2,7 +2,7 @@ import utilities from '../helpers/utilities';
 
 let full = 100;
 const eatProgress = `
-  <div id='progressBar'>
+  <div class='progressBar'>
     <div id='eatBarPercent'></div>
   </div>
 `;
@@ -63,7 +63,7 @@ const printEatBtns = () => {
         ${eatProgress}
         <div id='eatProgressPercent'>${full}%</div>
       </div>
-      <p class='category snacks'>Eat</p>
+      <h2 class='category'>Eat</h2>
     `;
   utilities.printToDom('eat', eatString);
   for (let x = 0; x < eatArr.length; x += 1) {

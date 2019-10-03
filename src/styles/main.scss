@@ -1,25 +1,36 @@
+#app{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 body{
     background-color: #c5dbcf;
 }
 
-button{
-    background-color: transparent;
-    border: none;
-    font-size: 2em;
-}
-
 .quad {
-    height: 50%;
-    width: 50%;
+    flex: 1 1 50%;
 }
 
 .row{
     display: flex;
 }
 
+// Icons
+
+button{
+    color: rgb(0, 81, 128);
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    padding: 2px 15px;
+}
+
+// Section Titles
+
 .category{
-    color: #779183fd;
-    font-size: 4em;
+    color: #77918365;
+    font-size: 6em;
+    font-weight: inherit;
     position: absolute;
 }
 
@@ -28,20 +39,51 @@ button{
     left: 5%;
 }
 
+#play .category{
+    top: 5%;
+    right: 5%;
+}
+
+// Justify Play & Sleep Right
+
+.rightDiv{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+// Progress Bars
+
 #fullScore{
     margin-top: 7px;
 }
 
-#progressBar{
-    background-color: dimgrey;
+#funScore{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7px;
+}
+
+.progressBar{
+    background-color: rgba(0, 81, 128, 0.616);
     border: 1px solid dimgrey;
     border-radius: 20px;
-    width: 30%;
+    margin-right: 5px;
+    width: 40%;
+}
+
+#eatBarPercent, #playBarPercent{
+    background-color: #84b368fd;
+    border-radius: 20px;
+    height: 100%;
 }
 
 #eatBarPercent{
-    background-color: green;
-    border-radius: 20px;
-    height: 100%;
     width: 100%;
+
+}
+
+#playBarPercent{
+    width: 50%;
+
 }
