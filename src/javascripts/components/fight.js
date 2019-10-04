@@ -1,0 +1,66 @@
+import utilities from '../helpers/utilities';
+
+let strength = 100;
+const fightProgress = `
+  <div class='progressBar'>
+    <div id='fightBarPercent'></div>
+  </div>
+`;
+
+const fightArr = [
+  {
+    id: 'fight0',
+    icon: '<i class="fas fa-user-ninja"></i>',
+    points: -10,
+  },
+  {
+    id: 'fight1',
+    icon: '<i class="fas fa-running"></i>',
+    points: 1,
+  },
+];
+
+const updateStrength = (e) => {
+  const selectedActivity = e.target.classList.value;
+  const selectedActivityParent = e.target.parentNode.classList.value;
+  for (let n = 0; n < fightArr.length; n += 1) {
+    if (selectedActivity.includes(fightArr[n].id) || selectedActivityParent.includes(fightArr[n].id)) {
+      strength += fightArr[n].points;
+    }
+    if (strength > 100) {
+      strength = 100;
+    } else if (strength < 0) {
+      strength = 0;
+    }
+  }
+  const strengthString = `${fightProgress} <div id='fightProgressPercent'>${strength}%</div>`;
+  utilities.printToDom('strengthScore', strengthString);
+  document.getElementById('fightBarPercent').style.width = `${strength}%`;
+};
+
+const printFightBtns = () => {
+  let fightString = `
+      <h2 class='category'>Fight</h2>
+      <div class='bottomDiv'>
+        <div class='row'>
+    `;
+  for (let i = 0; i < fightArr.length; i += 1) {
+    fightString += `
+      <button type='button' id='${fightArr[i].id}' class='${fightArr[i].id}Btn'>${fightArr[i].icon}</button>
+    `;
+  }
+  fightString += `
+        </div>
+        <div id='strengthScore' class='row'>
+          ${fightProgress}
+          <div id='fightProgressPercent'>${strength}%</div>
+        </div>
+      </div>
+    `;
+  utilities.printToDom('fight', fightString);
+  for (let x = 0; x < fightArr.length; x += 1) {
+    document.getElementById(fightArr[x].id).addEventListener('click', updateStrength);
+  }
+};
+
+export default { printFightBtns };

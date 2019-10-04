@@ -3,16 +3,31 @@
     flex-wrap: wrap;
 }
 
-body{
-    background-color: #c5dbcf;
-}
-
 .quad {
+    min-height: 51.5vh;
     flex: 1 1 50%;
+    margin: -10px;
+    padding: 10px;
 }
 
 .row{
     display: flex;
+}
+
+#eat.quad{
+    background-color: #c5dbcf;
+}
+
+#play.quad{
+    background-color: #b8d4c5;
+}
+
+#fight.quad{
+    background-color: #acc9ba;
+}
+
+#sleep.quad{
+    background-color: #a1bbae;
 }
 
 // Icons
@@ -39,12 +54,23 @@ button{
     left: 5%;
 }
 
+#fight .category{
+    bottom: 5%;
+    left: 5%;
+}
+
 #play .category{
     top: 5%;
     right: 5%;
 }
 
-// Justify Play & Sleep Right
+// Placement in Divs
+
+.bottomDiv{
+    position: fixed;
+    bottom: 5px;
+    width: 50%;
+}
 
 .rightDiv{
     display: flex;
@@ -54,7 +80,7 @@ button{
 
 // Progress Bars
 
-#fullScore{
+#fullScore, #strengthScore{
     margin-top: 7px;
 }
 
@@ -72,13 +98,13 @@ button{
     width: 40%;
 }
 
-#eatBarPercent, #playBarPercent{
+#eatBarPercent, #playBarPercent, #fightBarPercent{
     background-color: #84b368fd;
     border-radius: 20px;
     height: 100%;
 }
 
-#eatBarPercent{
+#eatBarPercent, #fightBarPercent{
     width: 100%;
 
 }
