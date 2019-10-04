@@ -3,11 +3,14 @@
     flex-wrap: wrap;
 }
 
+body{
+    margin: 0;
+}
+
 .quad {
-    min-height: 51.5vh;
+    min-height: 50vh;
     flex: 1 1 50%;
-    margin: -10px;
-    padding: 10px;
+    box-sizing: border-box;
 }
 
 .row{
@@ -64,6 +67,11 @@ button{
     right: 5%;
 }
 
+#sleep .category{
+    bottom: 5%;
+    right: 5%;
+}
+
 // Placement in Divs
 
 .bottomDiv{
@@ -84,7 +92,7 @@ button{
     margin-top: 7px;
 }
 
-#funScore{
+#funScore, #energyScore{
     display: flex;
     justify-content: flex-end;
     margin-top: 7px;
@@ -98,7 +106,7 @@ button{
     width: 40%;
 }
 
-#eatBarPercent, #playBarPercent, #fightBarPercent{
+#eatBarPercent, #playBarPercent, #fightBarPercent, #sleepBarPercent{
     background-color: #84b368fd;
     border-radius: 20px;
     height: 100%;
@@ -109,7 +117,7 @@ button{
 
 }
 
-#playBarPercent{
+#playBarPercent, #sleepBarPercent{
     width: 50%;
 
 }
