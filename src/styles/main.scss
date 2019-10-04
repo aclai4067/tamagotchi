@@ -17,6 +17,17 @@ body{
     display: flex;
 }
 
+#pet{
+    position: absolute;
+    top: 15%;
+    left: 33%;
+}
+
+.kittyImg{
+    height: auto;
+    max-width: 50%;
+}
+
 #eat.quad{
     background-color: #c5dbcf;
 }
