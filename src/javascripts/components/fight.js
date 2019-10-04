@@ -10,12 +10,12 @@ const fightProgress = `
 const fightArr = [
   {
     id: 'fight0',
-    icon: '<i class="fas fa-user-ninja"></i>',
+    icon: '<i class="fight0Btn fas fa-user-ninja"></i>',
     points: -10,
   },
   {
     id: 'fight1',
-    icon: '<i class="fas fa-running"></i>',
+    icon: '<i class="fight1Btn fas fa-running"></i>',
     points: 1,
   },
 ];
