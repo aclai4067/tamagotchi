@@ -17,17 +17,6 @@ body{
     display: flex;
 }
 
-#pet{
-    position: absolute;
-    top: 15%;
-    left: 33%;
-}
-
-.kittyImg{
-    height: auto;
-    max-width: 50%;
-}
-
 #eat.quad{
     background-color: #c5dbcf;
 }
@@ -45,13 +34,14 @@ body{
 }
 
 // Icons
-
-button{
-    color: rgb(0, 81, 128);
-    background-color: transparent;
-    border: none;
-    font-size: 2em;
-    padding: 2px 15px;
+.quad{
+    button{
+        color: rgb(0, 81, 128);
+        background-color: transparent;
+        border: none;
+        font-size: 2em;
+        padding: 2px 15px;
+    }
 }
 
 // Section Titles
