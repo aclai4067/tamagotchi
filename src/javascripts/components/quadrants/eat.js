@@ -1,9 +1,11 @@
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
+import './quadrants.scss';
+import '../progressBar/progressBar.scss';
 
 let full = 100;
 const eatProgress = `
   <div class='progressBar'>
-    <div id='eatBarPercent'></div>
+    <div id='eatBarPercent' class='progressFill'></div>
   </div>
 `;
 

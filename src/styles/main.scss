@@ -1,3 +1,6 @@
+@import './colors';
+@import './variables';
+
 #app{
     display: flex;
     flex-wrap: wrap;
@@ -7,118 +10,32 @@ body{
     margin: 0;
 }
 
-.quad {
-    min-height: 50vh;
-    flex: 1 1 50%;
-    box-sizing: border-box;
-}
-
 .row{
     display: flex;
 }
 
-#eat.quad{
-    background-color: #c5dbcf;
-}
+// #fullScore, #strengthScore{
+//     margin-top: 7px;
+// }
 
-#play.quad{
-    background-color: #b8d4c5;
-}
+// #funScore, #energyScore{
+//     display: flex;
+//     justify-content: flex-end;
+//     margin-top: 7px;
+// }
 
-#fight.quad{
-    background-color: #acc9ba;
-}
+// .progressBar{
+//     background-color: $lightblue;
+//     border: 1px solid dimgrey;
+//     border-radius: 20px;
+//     margin-right: 5px;
+//     width: 40%;
+// }
 
-#sleep.quad{
-    background-color: #a1bbae;
-}
+// #eatBarPercent, #fightBarPercent{
+//     @include progress-fill(100%);
+// }
 
-// Icons
-.quad{
-    button{
-        color: rgb(0, 81, 128);
-        background-color: transparent;
-        border: none;
-        font-size: 2em;
-        padding: 2px 15px;
-    }
-}
-
-// Section Titles
-
-.category{
-    color: #77918365;
-    font-size: 6em;
-    font-weight: inherit;
-    position: absolute;
-}
-
-#eat .category{
-    top: 5%;
-    left: 5%;
-}
-
-#fight .category{
-    bottom: 5%;
-    left: 5%;
-}
-
-#play .category{
-    top: 5%;
-    right: 5%;
-}
-
-#sleep .category{
-    bottom: 5%;
-    right: 5%;
-}
-
-// Placement in Divs
-
-.bottomDiv{
-    position: fixed;
-    bottom: 5px;
-    width: 50%;
-}
-
-.rightDiv{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 5%;
-}
-
-// Progress Bars
-
-#fullScore, #strengthScore{
-    margin-top: 7px;
-}
-
-#funScore, #energyScore{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 7px;
-}
-
-.progressBar{
-    background-color: rgba(0, 81, 128, 0.616);
-    border: 1px solid dimgrey;
-    border-radius: 20px;
-    margin-right: 5px;
-    width: 40%;
-}
-
-#eatBarPercent, #playBarPercent, #fightBarPercent, #sleepBarPercent{
-    background-color: #84b368fd;
-    border-radius: 20px;
-    height: 100%;
-}
-
-#eatBarPercent, #fightBarPercent{
-    width: 100%;
-
-}
-
-#playBarPercent, #sleepBarPercent{
-    width: 50%;
-
-}
+// #playBarPercent, #sleepBarPercent{
+//     @include progress-fill(50%);
+// }

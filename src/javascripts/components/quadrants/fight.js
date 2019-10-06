@@ -1,9 +1,9 @@
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
 
 let strength = 100;
 const fightProgress = `
   <div class='progressBar'>
-    <div id='fightBarPercent'></div>
+    <div id='fightBarPercent' class='progressFill'></div>
   </div>
 `;
 

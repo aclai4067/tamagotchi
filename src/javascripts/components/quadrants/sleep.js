@@ -1,9 +1,9 @@
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
 
 let energy = 50;
 const sleepProgress = `
   <div class='progressBar'>
-    <div id='sleepBarPercent'></div>
+    <div id='sleepBarPercent' class='progressFill'></div>
   </div>
 `;
 

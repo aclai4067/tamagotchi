@@ -3,6 +3,7 @@
     position: absolute;
     top: 2%;
     left: 33%;
+    width: 40%;
 
     .nameForm{
         height: 40%;
@@ -13,7 +14,7 @@
         border-radius: 5px;
         font-size: 1em;
         margin-left: 10%;
-        width: 30%;
+        width: 55%;
     }
 
     #namePet{
@@ -32,12 +33,12 @@
         margin: 0;
         text-align: center;
         text-shadow: 2px 2px 5px darkslategrey;
-        width: 60%;
+        width: 80%;
     }
 
     .kittyImg{
         height: auto;
         padding-top: 10%;
-        max-width: 50%;
+        max-width: 80%;
     }
 }

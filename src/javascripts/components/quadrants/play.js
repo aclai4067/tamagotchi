@@ -1,9 +1,9 @@
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
 
 let fun = 50;
 const playProgress = `
   <div class='progressBar'>
-    <div id='playBarPercent'></div>
+    <div id='playBarPercent' class='progressFill'></div>
   </div>
 `;
 

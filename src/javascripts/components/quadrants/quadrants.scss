@@ -1,0 +1,74 @@
+@import '../../../styles/colors';
+
+.quad {
+    min-height: 50vh;
+    flex: 1 1 50%;
+    box-sizing: border-box;
+
+    &#eat{
+        background-color: $eat;
+    }
+
+    &#play{
+        background-color: $play;
+    }
+
+    &#fight{
+        background-color: $fight;
+    }
+
+    &#sleep{
+        background-color: $sleep;
+    }
+
+    button{
+        color: $blue;
+        background-color: transparent;
+        border: none;
+        font-size: 2em;
+        padding: 2px 15px;
+    }    
+}
+
+// Section Titles
+
+.category{
+    color: $category;
+    font-size: 6em;
+    font-weight: inherit;
+    position: absolute;
+}
+
+#eat .category{
+    top: 5%;
+    left: 5%;
+}
+
+#fight .category{
+    bottom: 5%;
+    left: 5%;
+}
+
+#play .category{
+    top: 5%;
+    right: 5%;
+}
+
+#sleep .category{
+    bottom: 5%;
+    right: 5%;
+}
+
+// Placement in Divs
+
+.bottomDiv{
+    position: fixed;
+    bottom: 5px;
+    width: 50%;
+}
+
+.rightDiv{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
