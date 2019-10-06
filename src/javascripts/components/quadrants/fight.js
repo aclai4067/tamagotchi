@@ -36,6 +36,7 @@ const updateStrength = (e) => {
   const strengthString = `${fightProgress} <div id='fightProgressPercent'>${strength}%</div>`;
   utilities.printToDom('strengthScore', strengthString);
   document.getElementById('fightBarPercent').style.width = `${strength}%`;
+  return strength;
 };
 
 const printFightBtns = () => {
@@ -63,4 +64,6 @@ const printFightBtns = () => {
   }
 };
 
-export default { printFightBtns };
+const strengthHealth = () => strength;
+
+export default { printFightBtns, strengthHealth };

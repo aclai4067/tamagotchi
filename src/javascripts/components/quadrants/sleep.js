@@ -36,6 +36,7 @@ const updateEnergy = (e) => {
   const energyString = `${sleepProgress} <div id='sleepProgressPercent'>${energy}%</div>`;
   utilities.printToDom('energyScore', energyString);
   document.getElementById('sleepBarPercent').style.width = `${energy}%`;
+  return energy;
 };
 
 const printSleepBtns = () => {
@@ -63,4 +64,6 @@ const printSleepBtns = () => {
   }
 };
 
-export default { printSleepBtns };
+const energyHealth = () => energy;
+
+export default { printSleepBtns, energyHealth };

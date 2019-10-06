@@ -46,6 +46,7 @@ const updateFun = (e) => {
   const funString = `${playProgress} <div id='playProgressPercent'>${fun}%</div>`;
   utilities.printToDom('funScore', funString);
   document.getElementById('playBarPercent').style.width = `${fun}%`;
+  return fun;
 };
 
 const printPlayBtns = () => {
@@ -71,4 +72,6 @@ const printPlayBtns = () => {
   }
 };
 
-export default { printPlayBtns };
+const funHealth = () => fun;
+
+export default { printPlayBtns, funHealth };

@@ -48,6 +48,7 @@ const updateFullness = (e) => {
   const fullnessString = `${eatProgress} <div id='eatProgressPercent'>${full}%</div>`;
   utilities.printToDom('fullScore', fullnessString);
   document.getElementById('eatBarPercent').style.width = `${full}%`;
+  return full;
 };
 
 const printEatBtns = () => {
@@ -73,4 +74,6 @@ const printEatBtns = () => {
   }
 };
 
-export default { printEatBtns };
+const fullHealth = () => full;
+
+export default { printEatBtns, fullHealth };
