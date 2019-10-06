@@ -26,13 +26,18 @@
     }
 
     #selectedName{
+        color: rgb(0, 81, 128);
         font-size: 4em;
-        margin-top: 0;
+        font-weight: inherit;
+        margin: 0;
+        text-align: center;
+        text-shadow: 2px 2px 5px darkslategrey;
+        width: 60%;
     }
 
     .kittyImg{
         height: auto;
-        padding-top: 12%;
+        padding-top: 10%;
         max-width: 50%;
     }
 }

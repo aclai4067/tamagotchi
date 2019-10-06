@@ -5,11 +5,13 @@ let petString = '';
 
 const printPetName = () => {
   const selectedName = document.getElementById('petName').value;
-  petString = `
-    <h1 id='selectedName'>${selectedName}<h1>
-    <img class='kittyImg' src='/src/images/cat-outline.png' alt='kitty' />
-  `;
-  utilities.printToDom('pet', petString);
+  if (selectedName !== '') {
+    petString = `
+      <h1 id='selectedName'>${selectedName}</h1>
+      <img class='kittyImg' src='/src/images/cat-outline.png' alt='kitty' />
+    `;
+    utilities.printToDom('pet', petString);
+  }
 };
 
 const printPet = () => {
