@@ -11,6 +11,20 @@
     margin-top: 7px;
 }
 
+#progress{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+#healthScore{
+    position: absolute;
+    bottom: 12%;
+    left: 33%;
+    height: 3%;
+    width: 80%;
+}
+
 .progressBar{
     background-color: $lightblue;
     border: 1px solid dimgrey;
@@ -25,4 +39,8 @@
 
 #playBarPercent, #sleepBarPercent{
     @include progress-fill(50%);
+}
+
+#healthBarPercent{
+    @include progress-fill(75%);   
 }

@@ -70,7 +70,10 @@ const printEatBtns = () => {
     `;
   utilities.printToDom('eat', eatString);
   for (let x = 0; x < eatArr.length; x += 1) {
-    document.getElementById(eatArr[x].id).addEventListener('click', updateFullness);
+    document.getElementById(eatArr[x].id).addEventListener('click', () => {
+      updateFullness();
+      utilities.totalHealth();
+    });
   }
 };
 
