@@ -72,6 +72,18 @@ const printPlayBtns = () => {
   }
 };
 
+const neglectPlayPenalty = () => {
+  printPlayBtns();
+  setInterval(() => {
+    if (fun > 0) {
+      fun -= 1;
+      printPlayBtns();
+      document.getElementById('playBarPercent').style.width = `${fun}%`;
+    }
+  }, 20000);
+  return fun;
+};
+
 const funHealth = () => fun;
 
-export default { printPlayBtns, funHealth };
+export default { neglectPlayPenalty, funHealth };

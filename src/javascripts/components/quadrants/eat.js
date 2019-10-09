@@ -70,13 +70,22 @@ const printEatBtns = () => {
     `;
   utilities.printToDom('eat', eatString);
   for (let x = 0; x < eatArr.length; x += 1) {
-    document.getElementById(eatArr[x].id).addEventListener('click', () => {
-      updateFullness();
-      utilities.totalHealth();
-    });
+    document.getElementById(eatArr[x].id).addEventListener('click', updateFullness);
   }
+};
+
+const neglectEatPenalty = () => {
+  printEatBtns();
+  setInterval(() => {
+    if (full > 0) {
+      full -= 1;
+      printEatBtns();
+      document.getElementById('eatBarPercent').style.width = `${full}%`;
+    }
+  }, 20000);
+  return full;
 };
 
 const fullHealth = () => full;
 
-export default { printEatBtns, fullHealth };
+export default { neglectEatPenalty, fullHealth };

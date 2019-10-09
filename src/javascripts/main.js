@@ -8,12 +8,13 @@ import sleep from './components/quadrants/sleep';
 import health from './components/progressBar/progressBar';
 
 const init = () => {
-  eat.printEatBtns();
-  fight.printFightBtns();
+  eat.neglectEatPenalty();
+  fight.neglectFightPenalty();
   pet.printPet();
-  play.printPlayBtns();
-  sleep.printSleepBtns();
+  play.neglectPlayPenalty();
+  sleep.neglectSleepPenalty();
   health.printProgressBar();
+  health.updateHealth();
 };
 
 init();

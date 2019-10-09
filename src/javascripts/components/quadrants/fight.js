@@ -64,6 +64,18 @@ const printFightBtns = () => {
   }
 };
 
+const neglectFightPenalty = () => {
+  printFightBtns();
+  setInterval(() => {
+    if (strength > 0) {
+      strength -= 1;
+      printFightBtns();
+      document.getElementById('fightBarPercent').style.width = `${strength}%`;
+    }
+  }, 20000);
+  return strength;
+};
+
 const strengthHealth = () => strength;
 
-export default { printFightBtns, strengthHealth };
+export default { neglectFightPenalty, strengthHealth };

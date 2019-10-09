@@ -64,6 +64,18 @@ const printSleepBtns = () => {
   }
 };
 
+const neglectSleepPenalty = () => {
+  printSleepBtns();
+  setInterval(() => {
+    if (energy > 0) {
+      energy -= 1;
+      printSleepBtns();
+      document.getElementById('sleepBarPercent').style.width = `${energy}%`;
+    }
+  }, 20000);
+  return energy;
+};
+
 const energyHealth = () => energy;
 
-export default { printSleepBtns, energyHealth };
+export default { neglectSleepPenalty, energyHealth };

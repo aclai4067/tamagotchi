@@ -3,9 +3,6 @@ import eat from '../quadrants/eat';
 import play from '../quadrants/play';
 import fight from '../quadrants/fight';
 import sleep from '../quadrants/sleep';
-import utilities from '../../helpers/utilities';
-
-const health = (eat.fullHealth() + play.funHealth() + fight.strengthHealth() + sleep.energyHealth()) / 4;
 
 const printProgressBar = () => {
   const healthString = `
@@ -15,9 +12,14 @@ const printProgressBar = () => {
         </div>
     </div>
   `;
-  utilities.printToDom('progress', healthString);
+  document.getElementById('progress').innerHTML = healthString;
 };
 
-const updateHealth = () => health;
+const updateHealth = () => {
+  setInterval(() => {
+    const health = (eat.fullHealth() + play.funHealth() + fight.strengthHealth() + sleep.energyHealth()) / 4;
+    document.getElementById('healthBarPercent').style.width = `${health}%`;
+  }, 3000);
+};
 
 export default { printProgressBar, updateHealth };
