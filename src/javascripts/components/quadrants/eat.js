@@ -1,9 +1,11 @@
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
+import './quadrants.scss';
+import '../progressBar/progressBar.scss';
 
 let full = 100;
 const eatProgress = `
   <div class='progressBar'>
-    <div id='eatBarPercent'></div>
+    <div id='eatBarPercent' class='progressFill'></div>
   </div>
 `;
 
@@ -46,6 +48,7 @@ const updateFullness = (e) => {
   const fullnessString = `${eatProgress} <div id='eatProgressPercent'>${full}%</div>`;
   utilities.printToDom('fullScore', fullnessString);
   document.getElementById('eatBarPercent').style.width = `${full}%`;
+  return full;
 };
 
 const printEatBtns = () => {
@@ -71,4 +74,18 @@ const printEatBtns = () => {
   }
 };
 
-export default { printEatBtns };
+const neglectEatPenalty = () => {
+  printEatBtns();
+  setInterval(() => {
+    if (full > 0) {
+      full -= 1;
+      printEatBtns();
+      document.getElementById('eatBarPercent').style.width = `${full}%`;
+    }
+  }, 20000);
+  return full;
+};
+
+const fullHealth = () => full;
+
+export default { neglectEatPenalty, fullHealth };

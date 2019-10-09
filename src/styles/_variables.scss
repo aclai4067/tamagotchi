@@ -1,0 +1,7 @@
+@mixin progress-fill($width) {
+    background-color: #84b368fd;
+    background-image: linear-gradient(to bottom, #84b368fd, #719b59fd);
+    border-radius: 20px;
+    height: 100%;
+    width: $width;
+}

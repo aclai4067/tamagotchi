@@ -1,0 +1,47 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+#fullScore, #strengthScore{
+    margin-top: 7px;
+}
+
+#funScore, #energyScore{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7px;
+}
+
+#progress{
+    position: absolute;
+    margin-top: 10vh;
+    height: 80vh;
+    width: 100vw;
+}
+
+#healthScore{
+    position: absolute;
+    bottom: 3%;
+    left: 33%;
+    height: 5%;
+    width: 80%;
+}
+
+.progressBar{
+    background-color: $lightblue;
+    border: 1px solid dimgrey;
+    border-radius: 20px;
+    margin-right: 5px;
+    width: 40%;
+}
+
+#eatBarPercent, #fightBarPercent{
+    @include progress-fill(100%);
+}
+
+#playBarPercent, #sleepBarPercent{
+    @include progress-fill(50%);
+}
+
+#healthBarPercent{
+    @include progress-fill(75%);   
+}

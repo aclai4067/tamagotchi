@@ -1,9 +1,9 @@
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
 
 let fun = 50;
 const playProgress = `
   <div class='progressBar'>
-    <div id='playBarPercent'></div>
+    <div id='playBarPercent' class='progressFill'></div>
   </div>
 `;
 
@@ -46,6 +46,7 @@ const updateFun = (e) => {
   const funString = `${playProgress} <div id='playProgressPercent'>${fun}%</div>`;
   utilities.printToDom('funScore', funString);
   document.getElementById('playBarPercent').style.width = `${fun}%`;
+  return fun;
 };
 
 const printPlayBtns = () => {
@@ -71,4 +72,18 @@ const printPlayBtns = () => {
   }
 };
 
-export default { printPlayBtns };
+const neglectPlayPenalty = () => {
+  printPlayBtns();
+  setInterval(() => {
+    if (fun > 0) {
+      fun -= 1;
+      printPlayBtns();
+      document.getElementById('playBarPercent').style.width = `${fun}%`;
+    }
+  }, 20000);
+  return fun;
+};
+
+const funHealth = () => fun;
+
+export default { neglectPlayPenalty, funHealth };

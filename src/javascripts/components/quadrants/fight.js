@@ -1,9 +1,9 @@
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
 
 let strength = 100;
 const fightProgress = `
   <div class='progressBar'>
-    <div id='fightBarPercent'></div>
+    <div id='fightBarPercent' class='progressFill'></div>
   </div>
 `;
 
@@ -36,6 +36,7 @@ const updateStrength = (e) => {
   const strengthString = `${fightProgress} <div id='fightProgressPercent'>${strength}%</div>`;
   utilities.printToDom('strengthScore', strengthString);
   document.getElementById('fightBarPercent').style.width = `${strength}%`;
+  return strength;
 };
 
 const printFightBtns = () => {
@@ -63,4 +64,18 @@ const printFightBtns = () => {
   }
 };
 
-export default { printFightBtns };
+const neglectFightPenalty = () => {
+  printFightBtns();
+  setInterval(() => {
+    if (strength > 0) {
+      strength -= 1;
+      printFightBtns();
+      document.getElementById('fightBarPercent').style.width = `${strength}%`;
+    }
+  }, 20000);
+  return strength;
+};
+
+const strengthHealth = () => strength;
+
+export default { neglectFightPenalty, strengthHealth };
