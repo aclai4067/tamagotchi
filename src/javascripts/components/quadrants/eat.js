@@ -57,7 +57,7 @@ const printEatBtns = () => {
     `;
   for (let i = 0; i < eatArr.length; i += 1) {
     eatString += `
-      <button type='button' id='${eatArr[i].id}' class='${eatArr[i].id}Btn'>${eatArr[i].icon}</button>
+      <button type='button' id='${eatArr[i].id}' class='${eatArr[i].id}Btn healthBtns'>${eatArr[i].icon}</button>
     `;
   }
   eatString += `
