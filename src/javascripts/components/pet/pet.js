@@ -8,7 +8,7 @@ const printPetName = () => {
   if (selectedName !== '') {
     petString = `
       <h1 id='selectedName'>${selectedName}</h1>
-      <img class='kittyImg' src='/src/images/cat-outline.png' alt='kitty' />
+      <img class='kittyImg' id='petPic' src='/src/images/cat-outline.png' alt='kitty' />
     `;
     utilities.printToDom('pet', petString);
   }
@@ -20,7 +20,7 @@ const printPet = () => {
       <input type='text' id='petName' placeholder='Name your Catagotchi!' required></input>
       <button type='submit' id='namePet'>Submit</button>
     </form>
-    <img class='kittyImg' src='/src/images/cat-outline.png' alt='kitty' />
+    <img class='kittyImg' id='petPic' src='/src/images/cat-outline.png' alt='kitty' />
   `;
   utilities.printToDom('pet', petString);
   document.getElementById('namePet').addEventListener('click', printPetName);

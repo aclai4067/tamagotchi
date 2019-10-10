@@ -10,7 +10,10 @@ An application that allows you to interact with your pet by giving it a name and
 * Webpack
 
 ## Screenshots
+Display on page load:
 ![on load](https://raw.githubusercontent.com/aclai4067/tamagotchi/master/screenshots/tamagotchi-load.png)
+Display on pet death (total health reached 0%):
+![pet death](https://raw.githubusercontent.com/aclai4067/tamagotchi/master/screenshots/tamagotchi-death.png)
 
 ## Instructions for how to run the project
 

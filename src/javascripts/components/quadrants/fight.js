@@ -47,7 +47,7 @@ const printFightBtns = () => {
     `;
   for (let i = 0; i < fightArr.length; i += 1) {
     fightString += `
-      <button type='button' id='${fightArr[i].id}' class='${fightArr[i].id}Btn'>${fightArr[i].icon}</button>
+      <button type='button' id='${fightArr[i].id}' class='${fightArr[i].id}Btn healthBtns'>${fightArr[i].icon}</button>
     `;
   }
   fightString += `

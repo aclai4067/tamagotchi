@@ -19,6 +19,14 @@ const updateHealth = () => {
   setInterval(() => {
     const health = (eat.fullHealth() + play.funHealth() + fight.strengthHealth() + sleep.energyHealth()) / 4;
     document.getElementById('healthBarPercent').style.width = `${health}%`;
+    if (health === 0) {
+      document.getElementById('petPic').src = '/src/images/cat-outline-dead.png';
+      const btns = document.getElementsByClassName('healthBtns');
+      for (let i = 0; i < 12; i += 1) {
+        btns[i].style.display = 'none';
+      }
+      clearInterval(updateHealth);
+    }
   }, 3000);
 };
 

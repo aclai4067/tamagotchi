@@ -55,7 +55,7 @@ const printPlayBtns = () => {
     `;
   for (let i = 0; i < playArr.length; i += 1) {
     playString += `
-      <button type='button' id='${playArr[i].id}' class='${playArr[i].id}Btn'>${playArr[i].icon}</button>
+      <button type='button' id='${playArr[i].id}' class='${playArr[i].id}Btn healthBtns'>${playArr[i].icon}</button>
     `;
   }
   playString += `

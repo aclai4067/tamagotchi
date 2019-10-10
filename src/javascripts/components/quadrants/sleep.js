@@ -47,7 +47,7 @@ const printSleepBtns = () => {
     `;
   for (let i = 0; i < sleepArr.length; i += 1) {
     sleepString += `
-      <button type='button' id='${sleepArr[i].id}' class='${sleepArr[i].id}Btn'>${sleepArr[i].icon}</button>
+      <button type='button' id='${sleepArr[i].id}' class='${sleepArr[i].id}Btn healthBtns'>${sleepArr[i].icon}</button>
     `;
   }
   sleepString += `
